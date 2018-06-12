@@ -10,6 +10,6 @@ class Patient
   end
 
   def doctors
-    Doctor.all.each {|dr| dr.patient == self}
+    Doctor.all.map {|dr| dr.patient == self}
   end
 end
