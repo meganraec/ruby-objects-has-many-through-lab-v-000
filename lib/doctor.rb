@@ -13,8 +13,14 @@ class Doctor
   end
 
   def appointments
+    Appointment.all.select do |appt|
+      appt.doctor == self
+    end
   end
 
   def patients
+    songs.map do |song|
+      song.artist
+    end
   end
 end
