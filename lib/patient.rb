@@ -10,5 +10,6 @@ class Patient
   end
 
   def doctors
+    Doctor.all.each do {|dr| dr.patient == self}
   end
 end
